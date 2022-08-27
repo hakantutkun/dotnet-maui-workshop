@@ -1,4 +1,5 @@
 ﻿using ToDoApp.MAUI.DataServices;
+using ToDoApp.MAUI.Pages;
 
 namespace ToDoApp.MAUI;
 
@@ -16,6 +17,8 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddSingleton<IRestDataService, RestDataService>();
+		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddTransient<ManageToDoPage>();
 
 		return builder.Build();
 	}

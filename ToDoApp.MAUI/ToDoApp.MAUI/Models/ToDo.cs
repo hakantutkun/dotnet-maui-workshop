@@ -21,7 +21,7 @@ namespace ToDoApp.MAUI.Models
 
         private string _todoName;
 
-        public string TodoName
+        public string ToDoName
         {
             get { return _todoName; }
             set 
@@ -30,7 +30,7 @@ namespace ToDoApp.MAUI.Models
                     return;
 
                 _todoName = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TodoName)));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ToDoName)));
             }
         }
 
